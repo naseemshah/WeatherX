@@ -31,15 +31,13 @@ background: #638496;
 
 .background{
     
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-origin: content-box;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
     z-index: -5;
     
 }
@@ -64,13 +62,14 @@ background: #638496;
 }
 
 .gradient-back{
-    position: absolute;
-    right:0;
-    top:0;
-    width: 800px;
-    height: 100%;
-    background: linear-gradient(to right, #63849600  0%,  #638496 35%);
     
+    position: absolute;
+    right: 0px;
+    top:0;
+    width: 50vw;
+    height: 100vh;
+    background: linear-gradient(to right, #63849600  0%,  #638496 35%);
+    transform: translate(100px,0);
     z-index: 0;
 }
 
@@ -109,12 +108,13 @@ background: #638496;
     position: absolute;
     right: 100px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) scale(0.8);
     width: 300px;
-    
-    
+    transition: 0.5s ease-in-out;
+    transition-property: position, width, max-height, transform;
     border-radius: 30px;
     box-shadow: -70px 70px 80px rgba(0, 0, 0, 0.6);
+    
     
 }
 .title-container{
@@ -334,14 +334,15 @@ hr{
 
 @media screen and (max-width: 925px){
     .main{
-        transform: scale(0.9) translate(0,-50%);
+        transform: scale(0.8) translate(0, -60%);
         transform-origin: center;
-        right: 60x;
+        top: 50vh;
+        right: 60px;
         
     }
     .gradient-back{
         width: 50%;
-
+        right: 100px;
     }
     .background p {
         font-size: 0.7em;
@@ -363,28 +364,36 @@ hr{
         display: none;
     }
     .background p{
-        left: 50%;
+        left: 50vw;
         bottom: 0.05%;
-        
+        transition: 0.5s ease-in-out;
         padding: 4px;
-        transform: translate(-57%,0);
+        transform: translate(-50%,0);
         font-size: 0.6em;
     }
     
 
 }
 
+
+
 @media screen and (max-width: 450px){
-    .background p{
-        left: 50%;
-        bottom: 5px;
-        transform: translate(-50%,0);
-        font-size: 0.5em;
-    }
     .main{
-        
-        left: 50%;
-        transform: translate(-40%,-50%);
-        right: 0;
+        overflow: hidden;
+        left: 50vw;
+    }
+    .background p {
+        overflow: hidden;
+        left: 50vw;
     }
 }
+
+.bg-image{
+    position: relative;
+    min-height: 100vh;
+    min-width: 80vw;
+    z-index: -50;
+    outline: none;
+  
+  }
+  

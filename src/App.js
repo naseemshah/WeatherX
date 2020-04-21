@@ -69,7 +69,7 @@ class App extends React.Component {
             }
             
             else{
-                      
+                
                 this.setState({
                   temp: undefined,
                   temp_max: undefined,
@@ -82,7 +82,7 @@ class App extends React.Component {
                   error_code: data.cod,
                   error_msg: data.message,
                   description: undefined,
-                     
+                  
                 });
             }
     }
@@ -121,7 +121,7 @@ class App extends React.Component {
                   error_code: data.cod,
                   error_msg: data.message,
                   description: undefined,
-                     
+                  
                 });   
             }
     }
@@ -138,7 +138,7 @@ class App extends React.Component {
         error_code: undefined,
         error_msg: "Please Enter the City Name",
         description: undefined,
-           
+        
       });
     }
 
@@ -148,7 +148,7 @@ class App extends React.Component {
 
     const api_call= await fetch (`https://api.unsplash.com/search/photos?query=${condition}&client_id=164192e61055b9ad2a5a8881d8683259fc5c2f5f8761ab7012d0f513a8b47f23&page=1`)
     const data = await api_call.json();
-    console.log("Got Data from API in JSON \n",data);
+    console.log("Got Data from API    in JSON \n",data);
     var max = data.results.length;
     console.log("Max length of result Array:\n",max);
 
@@ -179,10 +179,6 @@ render() {
               userName={this.state.userName} 
               userLink={this.state.userLink}
               /> 
-              
-              
-              
-
               <div className="main">
               
               
