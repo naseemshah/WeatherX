@@ -108,7 +108,7 @@ background: #638496;
     position: absolute;
     right: 100px;
     top: 50%;
-    transform: translateY(-50%) scale(0.5);
+    transform: translateY(-100%) scale(0.5);
     width: 300px;
     transition: 0.5s ease-in-out;
     transition-property: position, width, max-height, transform;
@@ -334,7 +334,7 @@ hr{
 
 @media screen and (max-width: 925px){
     .main{
-        transform: scale(0.5) translate(0, -60%);
+        transform: scale(0.5) translate(0, -100%);
         transform-origin: center;
         top: 50vh;
         right: 60px;
