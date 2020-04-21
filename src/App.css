@@ -108,7 +108,7 @@ background: #638496;
     position: absolute;
     right: 100px;
     top: 50%;
-    transform: translateY(-50%) scale(0.8);
+    transform: translateY(-50%) scale(0.5);
     width: 300px;
     transition: 0.5s ease-in-out;
     transition-property: position, width, max-height, transform;
@@ -334,7 +334,7 @@ hr{
 
 @media screen and (max-width: 925px){
     .main{
-        transform: scale(0.8) translate(0, -60%);
+        transform: scale(0.5) translate(0, -60%);
         transform-origin: center;
         top: 50vh;
         right: 60px;
@@ -355,7 +355,7 @@ hr{
     .main{
         right: 50%;
         left: 50%;
-        transform: translate(-50%,-50%) scale(0.85);
+        transform: translate(-50%,-50%) scale(0.5);
         top: 50%;   
         box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.6);
         
